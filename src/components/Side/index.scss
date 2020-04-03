@@ -1,0 +1,21 @@
+.el-menu-demo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 220px;
+  box-sizing: border-box;
+
+  .el-menu-item a {
+    color: #303133;
+    display: block;
+  }
+  .el-menu-item.is-active{
+  }
+  .el-menu-item.is-active a {
+    color: #409eff;
+  }
+  /deep/ .el-submenu.is-active .el-submenu__title{
+    border-bottom: 1px solid #5889ff;
+  }
+}
