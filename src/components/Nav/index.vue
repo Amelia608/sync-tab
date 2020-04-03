@@ -16,16 +16,6 @@
         </el-tag>
       </transition-group>
     </vuedraggable>
-    <!-- <el-tag
-      v-for="(tag, index) in tabs"
-      :key="index"
-      :type="currentTabName === tag ? '' : 'info'"
-      class="mr15"
-      closable
-      @close="close(index)"
-    >
-      {{ tag }}
-    </el-tag> -->
   </div>
 </template>
 
