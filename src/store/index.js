@@ -4,8 +4,8 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 const state = {
   subMenu: ['SearchForm', 'Dialog', 'Other'],
-  tabs: ['SearchForm'],
-  currentTabName: 'SearchForm'
+  tabs: [],
+  currentTabName: ''
 }
 const mutations = {
   AddTab (state, val) {
@@ -16,13 +16,17 @@ const mutations = {
   removeTab (state, index) {
     return state.tabs.splice(index, 1)
   },
+  updateTabs (state, arr) {
+    state.tabs = arr
+  },
   setCurrentTabName (state, val) {
     state.currentTabName = val
   }
 }
 const getters = {
   menuActiveIndex: state => {
-    return state.subMenu.findIndex(el => el === state.currentTabName)
+    console.log(state.currentTabName)
+    return state.subMenu.findIndex(el => el === (state.currentTabName || state.subMenu[0]))
   }
 }
 const actions = {}
